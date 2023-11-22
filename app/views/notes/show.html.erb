@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @note.content %>
+</p>
+
+<p>
+  <strong>Group:</strong>
+  <%= @note.group.name %>
+</p>
+
+<% if @note.image.attached? %>
+  <%= image_tag @note.image %>
+<% end %>
+
+<%= link_to 'Edit', edit_note_path(@note) %> |
+<%= link_to 'Back', notes_path %>
